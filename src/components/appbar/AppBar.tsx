@@ -1,19 +1,18 @@
-import { AppBar as TopBar, Button, IconButton, Toolbar, Typography } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import { AppBar as TopBar, Avatar, Button, Toolbar, Typography } from '@material-ui/core';
 import * as React from "react";
+import me from './me.jpeg';
 
 export class AppBar extends React.Component {
     public render() {
         return (
             <TopBar position="static">
                 <Toolbar>
-                <IconButton color="inherit" aria-label="Menu">
-                    <MenuIcon />
-                </IconButton>
-                <Typography variant="title" color="inherit">
-                    Title
-                </Typography>
-                <Button color="inherit">Login</Button>
+                    <Avatar alt="Me" src={me} />
+                    <Typography variant="title" color="inherit">
+                        Alessandro Galli
+                    </Typography>
+                    <Button color="inherit">Me</Button>
+                    <Button color="inherit">Projects</Button>
                 </Toolbar>
             </TopBar> 
         )
